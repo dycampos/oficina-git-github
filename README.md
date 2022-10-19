@@ -9,10 +9,9 @@ O GIT é um Sistema de Controle de Versão Distribuído desenvolvido por Linus T
 
 - [Configurações Iniciais Git](docs/git/configuracores-iniciais-git.md)
 - [Iniciando um Repositório](docs/git/iniciando-repositorio.md)
-- [Linha de Comando](docs/git/linha-de-comando.md)
 - [Fluxo de Trabalho Básico Git](docs/git/fluxo-trabalho-basico-git.md)
 - [Referências](docs/referencias.md)
-- [Markdown](docs/markdown-basico.md)
+- [Branch](docs/git/branch.md)
 
 ### Markdown
 
@@ -26,3 +25,9 @@ A extesão do arquivo é o .md.
 - [Links](docs/markdown/links.md)
 - [Bloco de código](docs/markdown/bloco-codigo.md)
 - [Citação](docs/markdown/citacao.md)
+
+## Linha de comando
+Comandos básicos utilizados via linha de comando.
+
+- [Linha de Comando](docs/git/linha-de-comando.md)
+  
