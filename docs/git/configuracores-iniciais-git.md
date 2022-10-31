@@ -15,8 +15,22 @@ Essa configuração pode ser realizada em três locais diferentes, dependendo da
         $ git config <opcao> user.name "Fulano de Tal"
         $ git config <opcao> user.email fulanodetal@exemplo.br
 
-
 O comando *git config --list* lista todas as configurações.
 
-> ✍️ **_HORA DE PRATICAR_**: configurar o GIT com o nome e email do usuário.
+Para editar as configurações no editor padrão:  
 
+		$ git config --global -e
+
+## Configurações básicas
+
+É necessário configurar, pelo menos, o nome e o email do usuário para conseguir fazer o primeiro commit. Se estas informações não estiverem configuradas o Git vai exibir uma mensagem solicitando a configuração. Abaixo algumas configurações.
+
+- name: git config --global user.name "meu nome aqui"
+- email: git config --global user.name meu-email-aqui
+- editor padrão(Referência: https://docs.github.com/pt/get-started/getting-started-with-git/associating-text-editors-with-git):   
+	- Notepad++: git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+	- Visual Studio COde: git config --global core.editor "code --wait"
+	- Vim: git config --global core.editor vim
+- delimitador de linha: 
+	Windows: git config --global core.autocrlf true
+	linux: git config --global core.autocrlf input

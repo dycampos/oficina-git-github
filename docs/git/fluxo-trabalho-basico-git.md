@@ -14,9 +14,9 @@
 
 Cada arquivo do diretório de trabalho pode estar em um dos seguintes estados: 
 - __rastreados (_tracked_)__ - arquivos incluídos no último _snapshot_, arquivos que o Git conhece:
-  - __comitado ou não modificado (commited or unmodified)__ - dados armazenados de forma segura no banco de dados local;
-  - __modificado (modified)__ - dados alterados e não armazenados;
-  - __preparado (staged)__ - arquivo preparado para fazer parte do próximo commit.  
+- __comitado ou não modificado (commited or unmodified)__ - dados armazenados de forma segura no banco de dados local;
+- __modificado (modified)__ - dados alterados e não armazenados;
+- __preparado (staged)__ - arquivo preparado para fazer parte do próximo commit.  
 
 - __não rastreados (_untracked_)__ - arquivos não incluídos no último _snapshot_ e que não estão na área de stage.
   
@@ -30,11 +30,9 @@ O fluxo de trabalho básico do Git:
 <figcaption>Figura - Fluxo de trabalho Git</figcaption>
 </figure>
 
-> ✍️ **_HORA DE PRATICAR_**: adicionar um novo arquivo dentro da pasta do projeto. É aconselhável que a pasta já contenha algum arquivo para explicar melhor o ciclo de vida.
-
 A principal ferramenta para determinar em qual estados os arquivos estão é o ```git status```. Para uma visualização mais compacta pode-se utilizar a flag -s (short).
 
-    $ git status -s ou $ git status --sshort
+    $ git status -s ou $ git status --short
 
 
 Para um respositório vazio a seguinte mensagem será retornada:
@@ -45,13 +43,15 @@ Para um respositório vazio a seguinte mensagem será retornada:
     nothing to commit (create/copy files and use "git add" to track)
 
 
-Se já existem commits realizados no repositório a seguinte mensagem será exibida:
+Se já existem commits realizados no repositório, e não há alterações realizadas, a seguinte mensagem será exibida:
 
     $ git status
     On branch master
     nothing to commit, working tree clean
 
-No exemplo acima todos os arquivos estão no UNMODIFIED, porque não houve alteração desde o último commit. Agora vamos editar um dos arquivos. O arquivo está como MODIFIED. O git apresenta as opções: restaurar o arquivo e devolvê-lo ao estado de UNMODIFIED ou adicionar o arquivo na área de stage e mudar o estado dele para STAGED.
+No exemplo acima todos os arquivos estão no UNMODIFIED, porque não houve alteração desde o último commit. 
+
+Se houve alguma alteração, o arquivo estará como MODIFIED. O git apresenta as opções: restaurar o arquivo e devolvê-lo ao estado de UNMODIFIED ou adicionar o arquivo na área de stage e mudar o estado dele para STAGED.
 
     $ git status
     On branch master
@@ -62,7 +62,7 @@ No exemplo acima todos os arquivos estão no UNMODIFIED, porque não houve alter
 
     no changes added to commit (use "git add" and/or "git commit -a")
 
-Para o arquivo adicionado na STAGE:
+Para arquivos adicionados na STAGE, aparecerá a seguinte mensagem:
 
     $ git status
     On branch master
@@ -70,7 +70,7 @@ Para o arquivo adicionado na STAGE:
       (use "git restore --staged <file>..." to unstage)
             modified:   readme.md
 
-Agora vamos criar um novo arquivo:
+Novos arquivos são considerados como não rastreados pelo Git:
 
     $ git status
     On branch master
@@ -81,7 +81,7 @@ Agora vamos criar um novo arquivo:
     nothing added to commit but untracked files present (use "git add" to track)
 
 
-📜 Algumas vezes alguns arquivos não serão adicionados ao repositório mas estão na diretório de trabalho. Para estes arquivos não ficarem aparecendo como não rastreados existe o .gitignore. As pastas ou arquivos adicionados neste arquivo srão ignorados pelo git.
+📜 Algumas vezes alguns arquivos não serão adicionados ao repositório mas estão no diretório de trabalho. Para estes arquivos não ficarem aparecendo como não rastreados existe o .gitignore. As pastas ou arquivos adicionados neste arquivo serão ignorados pelo git.
 
 Após as alterações, inserções ou exclusões estamos preparados para criar um marco no projeto, um ponto de referênia, que podemos voltar caso necessário. Os arquivos da STAGE são armazedos no servidor local pelo comando _commit_. O comando abaixo abre o editor de texto para editar a mensagem de commit. No editor aparecem o que será incluido no commit.
 

@@ -1,6 +1,6 @@
 # Branch
 
-O Branch, do inglês ramificação, permite trabalhar paralelamente em outros versões de código. Na linha de desenvolvimento o código funcional, testado e validado, está armazenado em uma branch, normalmente chamada de main. Quando é necessário fazer alguma correção ou implementar uma nova funcionalidade é criado um novo branch, que herda todas as informações da main. As alterações realizadas não afetam o código da main. O desenvolvimento é realizado na nova branch e depois de finalizado e testado é mesclado com o código principal. 
+O Branch, do inglês ramificação, permite trabalhar paralelamente em outros versões de código. Na linha de desenvolvimento o código funcional, testado e validado, está armazenado em uma branch, normalmente chamada de main. Quando é necessário fazer alguma correção ou implementar uma nova funcionalidade é criada uma nova branch, que herda todas as informações da main. As alterações realizadas não afetam o código da main. O desenvolvimento é realizado na nova branch e depois de finalizado e testado é mesclado com o código principal. 
 
  <figure>
     <img src="../../img/git-branch.png" alt="Git branch" width=500px       height=200px>
@@ -13,6 +13,11 @@ Mover-se pela árvore do Git especificando o hash do commit pode se tornar um po
 
 __OBS:__ o Git só cria o Branch após o primeiro commit. As operações com branch só serão efetivadas após o primeiro commit. Erro gerado ao tentar criar novo branch antes do primeiro commit: __fatal: not a valid object name: 'main'__
 
+
+Renomear arquivo Git. Ele já faz automático e coloca na stage. Quando renomeado o arquivo sem usar o comando git, ele aparece duas alterações> exclusão e inclusão. Quando os arquivos são preparados o git verifica que houve a alteração e coloca como renamed.
+
+	git mv nome-antigo nome-novo
+    
 Comandos:  
 __Renomear #1:__ para alterar o nome da branch atual
     
@@ -60,7 +65,7 @@ mostrar último commit no branch
 
         $ git branch --merged:
 
-## Git merge e git rebase
+## Git Reset e Revert
 
 Há duas maneiras principais de desfazer mudanças no Git -- uma delas é usando git reset, e a outra é usando git revert.
 
@@ -140,6 +145,6 @@ Para limpar todos os stashes:
 
     $ git stash clear
 
-# Referências
-https://learngitbranching.js.org/?locale=pt_BR
-https://git-school.github.io/visualizing-git/
+## Referências
+[1 - Learning Git Branching](https://learngitbranching.js.org/?locale=pt_BR)  
+[2 - Git School](https://git-school.github.io/visualizing-git/)
