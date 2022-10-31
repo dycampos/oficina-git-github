@@ -1,6 +1,6 @@
 # oficina-git-github
 
-A oficina abordará o uso do Git e Github na prática.
+A oficina abordará o uso do Git e Github na prática. Pode-se utilizar o roteiro clicando [aqui](roteiro.md).
 
 ## Conteúdo
 
